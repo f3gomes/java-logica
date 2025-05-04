@@ -1,8 +1,17 @@
+import java.util.Scanner;
+
 public class TelaInicial {
   private String mensagem;
-
+  Scanner continuar = new Scanner(System.in);
+  
   public void exibirMensagemInicial() {
+    for (int i = 0; i < 50; ++i) System.out.println();
     System.out.println(this.mensagem);
+    System.out.println("");
+    System.out.println("Pressione enter para continuar...");
+
+    continuar.nextLine();
+    for (int i = 0; i < 50; ++i) System.out.println();
   }
 
   public void atulizaMensagemInicial() {
