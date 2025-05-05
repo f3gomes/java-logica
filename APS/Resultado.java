@@ -14,7 +14,12 @@ public class Resultado {
 	}
 
 	public void setRespostas(String resposta) {
-		listaDeRespostas.add(resposta);
+		if(resposta.matches("^[a-dA-D]$")) {
+			listaDeRespostas.add(resposta);
+		} else {
+			System.out.println("\nResposta inválida - Programa encerrado");
+			System.exit(1);
+		} 
 	}
 
 	public void exibirTitulo(int pontuacao) {
@@ -31,30 +36,20 @@ public class Resultado {
 					"Avançado: Entendimento correto e crítico dos conceitos, com foco nas causas estruturais e sociais.");
 		} else {
 			System.out.println(
-					"Expert: A resposta reflete uma análise profunda e uma visão abrangente do tema, com conhecimento detalhado das implicações sociais. \n\n\n\n");
+					"Expert: A resposta reflete uma análise profunda e uma visão abrangente do tema, com conhecimento detalhado das implicações sociais.");
 		}
 
-		System.out.println("Feito por: Felipe Gomes - Unifametro 2025");
+		System.out.println("\n\nFeito por: Felipe Gomes - Unifametro 2025");
 	}
 
 	public int calcularPontuacao(List<String> respostas) {
 		for (String resposta : respostas) {
 			switch (resposta.toLowerCase()) {
-				case "a":
-					totalPontos += 5;
-					break;
-				case "b":
-					totalPontos += 10;
-					break;
-				case "c":
-					totalPontos += 15;
-					break;
-				case "d":
-					totalPontos += 20;
-					break;
-				default:
-					System.out.println("Resposta inválida: " + resposta);
-					break;
+				case "a" -> totalPontos += 5;
+				case "b" -> totalPontos += 10;
+				case "c" -> totalPontos += 15;
+				case "d" -> totalPontos += 20;
+				default -> System.exit(1);
 			}
 		}
 
