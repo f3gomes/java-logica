@@ -17,8 +17,8 @@ public class Resultado {
 		listaDeRespostas.add(resposta);
 	}
 
-	public void obterTitulo(int pontuacao) {
-		System.out.println("Nível de conhecimento é: \n");
+	public void exibirTitulo(int pontuacao) {
+		System.out.println("Seu nível de conhecimento é:");
 
 		if (pontuacao <= 25) {
 			System.out.println(
@@ -31,8 +31,10 @@ public class Resultado {
 					"Avançado: Entendimento correto e crítico dos conceitos, com foco nas causas estruturais e sociais.");
 		} else {
 			System.out.println(
-					"Expert: A resposta reflete uma análise profunda e uma visão abrangente do tema, com conhecimento detalhado das implicações sociais.");
+					"Expert: A resposta reflete uma análise profunda e uma visão abrangente do tema, com conhecimento detalhado das implicações sociais. \n\n\n\n");
 		}
+
+		System.out.println("Feito por: Felipe Gomes - Unifametro 2025");
 	}
 
 	public int calcularPontuacao(List<String> respostas) {
