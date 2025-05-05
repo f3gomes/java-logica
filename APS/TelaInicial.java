@@ -6,8 +6,7 @@ public class TelaInicial {
   
   public void exibirMensagemInicial() {
     for (int i = 0; i < 50; ++i) System.out.println();
-    System.out.println(this.mensagem);
-    System.out.println("");
+    System.out.println(this.mensagem + "\n\n");
     System.out.println("Pressione enter para continuar...");
 
     continuar.nextLine();

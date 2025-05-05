@@ -7,9 +7,6 @@ public class Main {
     home.exibirMensagemInicial();
 
     questionario.exibirQuestionario();
-
-    questionario.calcularPontuacao(questionario.getRespostas());
-    questionario.obterTitulo(questionario.getTotalDePontos());
-
+    questionario.exibirResultado();
   }
 }
