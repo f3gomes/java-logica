@@ -22,6 +22,10 @@ public class Resultado {
 		} 
 	}
 
+	public void setListaDeRespostas(List<String> listaDeRespostas) {
+		this.listaDeRespostas = listaDeRespostas;
+	}
+
 	public void exibirTitulo(int pontuacao) {
 		System.out.println("Seu nível de conhecimento é:");
 
